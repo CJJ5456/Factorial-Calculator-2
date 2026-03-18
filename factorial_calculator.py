@@ -1,12 +1,30 @@
 """
 Filename: factorial_calculator.py
-Author: <NAME>
+Author: <Givens,CJ>
 Created: <DATE>
 Instructor: Holtslander
 """
 
 def factorial():
-    # Write your code here
+    print("Enter a whole number on the line below.")
+    
+    num = int(input())
+    
+    if num == 0:
+        print("0! = 1")
+        return
+
+    total = 1
+    print(str(num) + "! =", end=" ")
+
+    for i in range(num, 0, -1):
+        total = total * i
+        print(i, end="")
+        if i != 1:
+            print(" * ", end="")
+
+    print(" =", total)
+
 
 
 # You should not need to change any code below this point
